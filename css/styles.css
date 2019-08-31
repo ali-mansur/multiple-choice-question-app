@@ -1,0 +1,22 @@
+.card .card-action:last-child {
+    border-top: 0;
+}
+
+.required {
+    color: #fa8b8b;
+}
+
+.chart-container {
+    margin: 100px auto;
+    width: max-content;
+    text-align: center;
+}
+
+.time-left{
+    text-align: right;
+    margin: 20px;
+}
+
+.main-content {
+    padding-top: 50px; 
+}

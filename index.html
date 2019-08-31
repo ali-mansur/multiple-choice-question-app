@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> MCQ task </title>
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    </head>
+    <body ng-app="MCQ">
+        <div class="main-content" ng-controller="mcqController">
+            <instruction ng-if="!exam.isStarted" exam-started="exam.isStarted" instruction="exam.instruction" exam-name="{{exam.name}}"></instruction>
+            <questions ng-if="exam.isStarted && !exam.isSubmitted" exam-submitted="exam.isSubmitted" questions="exam.questions" time-left="{{exam.formattedTimeLeft}}"></questions>
+            <result ng-if="exam.isSubmitted" questions="exam.questions"></result>
+        </div>
+    </body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts-ng/1.2.1/highcharts-ng.min.js"> </script>
+    <script src="./js/app/main.js"></script>
+    <script src="./js/app/services/service.exam.js"></script>
+    <script src="./js/app/directives/instruction/instruction.js"></script>
+    <script src="./js/app/directives/questions/questions.js"></script>
+    <script src="./js/app/directives/result/result.js"></script>
+</html>

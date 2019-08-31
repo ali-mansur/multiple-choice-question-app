@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col s12 m6 l6 xl6 offset-l3 offset-xl3 offset-m3">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title"> {{examName}} </span>
+            </div>
+            
+            <div class="collection">
+                <a class="collection-item"> <h6> Please read the instruction before starting the exam... </h6> </a>
+                <p class="collection-item" ng-repeat=" i in instruction"> {{$index+1}}. {{i}}. </p>
+                
+                <p class="collection-item"> 
+                    7. If you have read all the instructions above, you can 
+                    <a class="waves-effect waves-light btn-small" ng-click="startExam()" > Start Exam </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>
